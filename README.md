@@ -1,57 +1,73 @@
-# 🚀 Getting started with Strapi
+# QuizMe (Backend)
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+There are 2 project created for the app to run
 
-### `develop`
+1. quiz-me - Frontend project (https://github.com/chiragdoctor/quiz-me)
+2. quiz-me-backend - Backend Strapi CMS Project (https://github.com/chiragdoctor/quiz-me-backend)
+   Clone the frontend project
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+## To run the project locally
 
+Frontend
+
+1. Clone the project `git clone git@github.com:chiragdoctor/quiz-me.git`
+2. Go in the folder & npm install
+3. Command to run the project
+
+```bash
+npm run dev
 ```
+
+Backend
+
+1. Clone the project `git clone git@github.com:chiragdoctor/quiz-me-backend.git`
+2. Go in the folder & npm install
+3. Command to run the project
+
+```bash
 npm run develop
-# or
-yarn develop
 ```
 
-### `start`
+Once the backend os running, we need to create a user (admin user) and start creating data. This step is just for local development, on production the data is already set.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-npm run start
-# or
-yarn start
-```
+## Production
 
-### `build`
+Frontend is deployed on Vercel,
+https://quizme-gamma.vercel.app/
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+Backend is deployed on Heroku
+https://quizmebackend.herokuapp.com/admin/auth/login
 
-```
-npm run build
-# or
-yarn build
-```
+**Credentials will be provided in the email**
 
-## ⚙️ Deployment
+We can use this credentials to create new content
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+I have already setup some content so that we can go through the website
 
-## 📚 Learn more
+# Process
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+1. Understood the problem statement i.e. requirements
+2. Based on that I have selected the technologies. In our case we have t make a quiz app, it is a good option to have a CMS system in place. I have chosen Strapi CMS as the backend
+3. The frontend of the app uses React, Next.js & Tailwind CSS
+4. Once I had the sorted out the technologies, I had to re-iterate over the problem statement and come up with a mindmap which help me to take a step by step approach to solve the problem. Image attached bellow
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+![Mind Map](./public/images/Steps%20for%20Quiz%20App.png)
 
-## ✨ Community
+5. After that I used this as a reference to get to the solution. This mindmap is just for reference purpose.
+6. Once the solution was developed, I have tested the solution locally.
+7. Then it was deployed to production environment
+   1. CMS - Heroku
+   2. NextJS - Vercel
+8. Again I went thought one round of testing on production
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## Enhancements
 
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+1. Can Implement all the **CRUD operations** - There was no need at this point in the exercise to implement it. But can be done as extension
+   1. Like registering user
+   2. Making admin panel to store data in CMS
+2. **Authenticating User ** -
+   1. Login functionality
+   2. Role based access
+3. Refactor Tailwind CSS code to be more reusable
